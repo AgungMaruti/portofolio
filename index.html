@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Developer - Full Stack & Mobile Development">
+    <title>Portfolio - Developer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="grid-overlay"></div>
+        <canvas id="matrix-canvas"></canvas>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">PORTOFOLIO</span>
+                <span class="logo-bracket">/&gt;</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="glitch-wrapper">
+                        <h1 class="hero-title glitch" data-text="Hello, I'm">Hello, I'm</h1>
+                    </div>
+                    <h2 class="hero-name">
+                        <span class="typing-text"></span>
+                        <span class="cursor">|</span>
+                    </h2>
+                    <p class="hero-subtitle">
+                        <span class="accent-text">Full Stack Developer</span> | 
+                        <span class="accent-text">Mobile Developer</span> | 
+                        <span class="accent-text">Data Analyst</span>
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>Get In Touch</span>
+                            <div class="btn-glow"></div>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <div class="image-border"></div>
+                        <img src="assets/images/profile.jpg" alt="Profile Photo" class="profile-img">
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+            </div>
+            
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">01.</span>
+                <span class="title-text">About Me</span>
+                <div class="title-line"></div>
+            </h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        Seorang mahasiswa Universitas Gunadarma dari Fakultas Ilmu Komputer dan Teknologi Informasi jurusan Sisem Informasi, 
+                        mempunyai kemampuan dalam Analisis data, Web Developer, Futter Developer, 
+                        dan juga saya memiliki kemampuan komunikasi yang baik dan dapat bekerja secara kolaboratif.
+                    </p>
+                    <p class="about-description">
+                        Saya bersemangat untuk terus belajar dan mengembangkan keterampilan saya di bidang teknologi. 
+                        Saya percaya bahwa teknologi dapat memberikan dampak positif yang besar bagi masyarakat, 
+                        dan saya ingin menjadi bagian dari perubahan tersebut dengan kontribusi saya sebagai developer.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">💻</div>
+                            <div class="highlight-text">
+                                <h4>Clean Code</h4>
+                                <p>Menulis kode yang maintainable & scalable</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🚀</div>
+                            <div class="highlight-text">
+                                <h4>Fast Learner</h4>
+                                <p>Cepat beradaptasi dengan teknologi baru</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🎯</div>
+                            <div class="highlight-text">
+                                <h4>Problem Solver</h4>
+                                <p>Fokus pada solusi yang efektif</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">02.</span>
+                <span class="title-text">Skills & Technologies</span>
+                <div class="title-line"></div>
+            </h2>
+          <div class="skills-grid">
+
+    <!-- Data Analysis -->
+    <div class="skill-category">
+        <div class="category-header">
+            <span class="category-icon">📊</span>
+            <h3>Data Analysis</h3>
+        </div>
+
+        <div class="skill-list">
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">Python</span>
+                    <span class="skill-level">Intermediate</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="50"></div>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">Pandas</span>
+                    <span class="skill-level">Intermediate</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="50"></div>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">NumPy</span>
+                    <span class="skill-level">Intermediate</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="50"></div>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">Matplotlib / Seaborn</span>
+                    <span class="skill-level">Intermediate</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="50"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Web Development -->
+    <div class="skill-category">
+        <div class="category-header">
+            <span class="category-icon">🌐</span>
+            <h3>Web Development</h3>
+        </div>
+
+        <div class="skill-list">
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">HTML / CSS / JavaScript</span>
+                    <span class="skill-level">Intermediate</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="50"></div>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">Node.js</span>
+                    <span class="skill-level">Intermediate</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="50"></div>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">MySQL</span>
+                    <span class="skill-level">Intermediate</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="50"></div>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">PHP</span>
+                    <span class="skill-level">Beginner</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="30"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Development -->
+    <div class="skill-category">
+        <div class="category-header">
+            <span class="category-icon">📱</span>
+            <h3>Mobile Development</h3>
+        </div>
+
+        <div class="skill-list">
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">Flutter</span>
+                    <span class="skill-level">Intermediate</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="50"></div>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">Widget Flutter</span>
+                    <span class="skill-level">Intermediate</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="50"></div>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">Riverpod</span>
+                    <span class="skill-level">Intermediate</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="50"></div>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span class="skill-name">setState</span>
+                    <span class="skill-level">Intermediate</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="50"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">03.</span>
+                <span class="title-text">Featured Projects</span>
+                <div class="title-line"></div>
+            </h2>
+            <div class="projects-grid">
+                 <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/project1.jpg" alt="Project 1">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                 <a href="https://github.com/AgungMaruti/gohubweb" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">E-Menu Web </h3>
+                        <p class="project-description">
+                            Full-stack e-commerce platform dengan Node.js, MySQL, dan modern UI/UX.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML,CSS</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/project2.jpg" alt="Project ">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/AgungMaruti/habitly_app" class="project-link">GitHub</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Flutter Mobile App</h3>
+                        <p class="project-description">
+                            Aplikasi Habitly yang bisa mencatat kegiatan kegiatan yang akan dilakukan.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Widgets</span>
+                            <span class="tag">Riverpod</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">04.</span>
+                <span class="title-text">Get In Touch</span>
+                <div class="title-line"></div>
+            </h2>
+            <div class="contact-content">
+                <div class="contact-text">
+                    <h3>Let's Work Together!</h3>
+                    <p>
+                        Saya selalu terbuka untuk project baru, kolaborasi, atau sekadar ngobrol tentang teknologi. 
+                        Jangan ragu untuk menghubungi saya!
+                    </p>
+                </div>
+                <div class="contact-links">
+                    <a href="https://github.com/AgungMaruti" target="_blank" class="contact-card github">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h4>GitHub</h4>
+                            <p>Check out my code</p>
+                        </div>
+                    </a>
+
+                    <a href="https://drive.google.com/file/d/1RjjejN38O5sH19O4QPAfWF2dpbbvqgzB/view?usp=drive_link" download class="contact-card cv">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10 9 9 9 8 9"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h4>Download CV</h4>
+                            <p>Get my resume</p>
+                        </div>
+                    </a>
+
+                    <a href="https://wa.me/62881037387241" target="_blank" class="contact-card whatsapp">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h4>WhatsApp</h4>
+                            <p>Send me a message</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p> Siap Berkontribusi Dengan Perusahaan Anda</p>
+                <div class="footer-links">
+                    <a href="https://github.com/AgungMaruti" target="_blank">GitHub</a>
+                    <a href="https://wa.me/62881037387241" target="_blank">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,4 +1,28 @@
 // ================================================================
+// SOURCE PROTECTION
+// ================================================================
+(function initProtection() {
+    // disable right-click
+    document.addEventListener('contextmenu', e => e.preventDefault());
+
+    // disable common devtools shortcuts
+    document.addEventListener('keydown', e => {
+        if (
+            e.key === 'F12' ||
+            (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
+            (e.ctrlKey && e.key === 'U')
+        ) {
+            e.preventDefault();
+            return false;
+        }
+    });
+
+    // console warning
+    console.log('%c⚠️ Stop!', 'font-size: 2rem; color: red; font-weight: bold;');
+    console.log('%cThis is a protected area. If you are interested in working with me, please contact anakagungmaruti@gmail.com', 'font-size: 1rem;');
+})();
+
+// ================================================================
 // THEME TOGGLE
 // ================================================================
 (function initTheme() {

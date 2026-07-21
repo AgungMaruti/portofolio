@@ -1238,6 +1238,26 @@ body[data-theme="light"]       .icon-sun  { display: none; }
 body[data-theme="light"]       .icon-moon { display: block; }
 
 /* ============================================================
+   PDF DOWNLOAD BUTTON (navbar)
+   ============================================================ */
+.pdf-nav-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    width: 36px; height: 36px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: background var(--transition), color var(--transition), border-color var(--transition);
+    flex-shrink: 0;
+}
+.pdf-nav-btn:hover {
+    background: rgba(124,106,247,0.1);
+    border-color: var(--accent);
+    color: var(--text-primary);
+}
+
+/* ============================================================
    LIGHT MODE
    ============================================================ */
 body[data-theme="light"] {
@@ -1539,4 +1559,64 @@ body.theme-switching,
 body.theme-switching * {
     transition: background-color 0.3s ease, color 0.3s ease,
                 border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* ============================================================
+   PRINT STYLES — Download Portfolio as PDF
+   ============================================================ */
+@media print {
+  /* Force light mode for print */
+  body {
+    --bg: #ffffff;
+    --bg-2: #f5f3ff;
+    --surface: #ffffff;
+    --surface-hover: #f5f3ff;
+    --border: #e2ddf5;
+    --border-glow: #c4b5fd;
+    --accent: #6d28d9;
+    --accent-2: #7c3aed;
+    --accent-3: #8b5cf6;
+    --text-primary: #1e1b4b;
+    --text-secondary: #4b4668;
+    --text-muted: #787490;
+    background: #ffffff !important;
+    color: #1e1b4b !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Hide interactive overlays */
+  #bg-canvas, .grain-overlay, .hero-scroll-hint, .hamburger, .theme-toggle { display: none !important; }
+
+  /* Show all reveal elements */
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+
+  /* Fix fixed navbar */
+  .navbar { position: relative !important; background: #ffffff !important; border-bottom: 1px solid #e2ddf5; }
+  .navbar.scrolled { background: #ffffff !important; backdrop-filter: none; }
+
+  /* Remove fixed positioning */
+  body { overflow-x: visible !important; }
+
+  /* Hide button group in print (only content needed) */
+  .hero-actions, .nav-cta, #pdf-download-btn, .pdf-nav-btn { display: none !important; }
+
+  /* Prevent page breaks inside cards */
+  .about-card, .skill-group, .timeline-content, .certificate-card, .project-item { break-inside: avoid; }
+
+  /* Fix gradient text for print */
+  .stat-number { -webkit-text-fill-color: #6d28d9 !important; background: none !important; }
+
+  /* Fix RTL project items */
+  .project-item:nth-child(even), .project-item:nth-child(even) > * { direction: ltr !important; }
+
+  /* Section spacing for print */
+  .section { padding: 40px 0; page-break-inside: avoid; }
+  .hero { min-height: auto; padding: 60px 0 40px; }
+
+  /* Links visible */
+  a { color: #6d28d9 !important; text-decoration: underline; }
+
+  /* Footer compact */
+  .footer { padding: 20px 0; }
 }

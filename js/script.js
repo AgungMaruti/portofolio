@@ -305,3 +305,39 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
         }
     });
 });
+
+
+// ================================================================
+// PDF DOWNLOAD (print to PDF)
+// ================================================================
+(function initPdfDownload() {
+    function prepareForPrint() {
+        document.body.setAttribute('data-theme', 'light');
+        document.querySelectorAll('.reveal').forEach(el => { el.classList.add('visible'); el.style.opacity = '1'; el.style.transform = 'none'; });
+        const canvas = document.getElementById('bg-canvas'); if (canvas) canvas.style.display = 'none';
+        const grain = document.querySelector('.grain-overlay'); if (grain) grain.style.display = 'none';
+        const navbar = document.getElementById('navbar'); if (navbar) navbar.classList.add('scrolled');
+        document.querySelectorAll('.stat-number').forEach(el => { el.style.webkitTextFillColor = '#6d28d9'; });
+        document.querySelectorAll('img[loading="lazy"]').forEach(img => { img.setAttribute('loading', 'eager'); });
+    }
+
+    function restoreAfterPrint() {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'light') document.body.setAttribute('data-theme', 'light');
+        else document.body.removeAttribute('data-theme');
+        const canvas = document.getElementById('bg-canvas'); if (canvas) canvas.style.display = '';
+        const grain = document.querySelector('.grain-overlay'); if (grain) grain.style.display = '';
+        document.querySelectorAll('.stat-number').forEach(el => { el.style.webkitTextFillColor = ''; });
+    }
+
+    function downloadPdf() {
+        prepareForPrint();
+        window.print();
+        setTimeout(restoreAfterPrint, 500);
+    }
+
+    const heroBtn = document.getElementById('pdf-download-btn');
+    const navBtn  = document.getElementById('pdf-nav-btn');
+    if (heroBtn) heroBtn.addEventListener('click', downloadPdf);
+    if (navBtn) navBtn.addEventListener('click', downloadPdf);
+})();
